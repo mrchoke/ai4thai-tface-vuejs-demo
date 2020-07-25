@@ -1,6 +1,6 @@
 # ai4thai-tface-vuejs-demo
 
-DEMO สำหรับการใช้งาน AI For Thai T-Face API โดยใช้ Javascript
+DEMO สำหรับการใช้งาน AI For Thai T-Face API โดยใช้ Vue.js
 
 ## ตัวอย่าง
 
