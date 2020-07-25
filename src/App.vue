@@ -1,28 +1,54 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app>
+    <v-app-bar app color="#043c3b" dark dense>
+      <div class="d-flex align-center">
+        <v-img
+          alt="AI4Thai"
+          class="shrink mr-2"
+          contain
+          src="@/assets/logo.png"
+          transition="scale-transition"
+          width="40"
+        />
+        T-Face
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn href="https://aiforthai.in.th" target="_blank" text>
+        <span class="mr-2">Read More</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <TFace />
+    </v-main>
+    <v-footer padless height="45">
+      <v-col class="text-center" cols="12">
+        <p>Copyright {{ Copyright }}. AI For Thai</p>
+      </v-col>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TFace from "./components/TFace";
 
 export default {
   name: "App",
+
   components: {
-    HelloWorld
+    TFace
+  },
+
+  data: () => ({
+    //
+  }),
+  computed: {
+    Copyright() {
+      return new Date().getFullYear();
+    }
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
